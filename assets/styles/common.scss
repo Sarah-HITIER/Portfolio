@@ -1,0 +1,53 @@
+@import "import/colors";
+@import "import/fonts";
+@import "import/header";
+
+* {
+    margin: 0;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+    }
+}
+
+html {
+    height: 100%;
+
+    body {
+        transform: scale(0.8);
+        transform-origin: 0 0;
+        width: 125%;
+        background: $black-gradient no-repeat;
+        color: $white;
+        transition: 0.5s;
+    }
+
+    .light-mode {
+        background: $white-gradient no-repeat;
+        color: $black;
+    }
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+    * {
+        color: $white;
+    }
+
+    body {
+        background: $black-gradient no-repeat;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    * {
+        color: $black;
+    }
+
+    body {
+        background: $white-gradient no-repeat;
+    }
+}
+*/

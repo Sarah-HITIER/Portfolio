@@ -1,0 +1,17 @@
+include ../mixins/icons/icons
+include ../mixins/icons/logo
+include ../mixins/menu/menu
+
+header
+    a(href="index.html").logo-header
+        +logo
+    .menu-desktop
+        +menu-desktop
+    .settings
+        .search 
+            +search
+        .toggle
+            input#darkmode(type="checkbox" checked="true")
+            label.toggle-item(for="darkmode")
+                .check
+
