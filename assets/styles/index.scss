@@ -1,4 +1,37 @@
-* {
-    margin: 0;
-    color: blue;
+@import "import/colors";
+
+.hero {
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        width: calc(100vw / 3);
+    }
+
+    .logo-loader-hero {
+        transition: 500ms;
+        width: calc(100vw / 3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+    }
+
+    ul {
+        width: calc(100vw / 3);
+    }
+}
+
+.logo-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: calc(100%-90px);
+    width: 100vw;
+    z-index: 1;
+    top: 0;
+    background: $black-gradient;
 }

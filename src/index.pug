@@ -1,7 +1,15 @@
 extends layout
+
+include mixins/icons/logo
+
 block content
-    h2 BIENVENUE SUR LE PORTFOLIO DE SARAH HITIER
-    ul
-        li UI Design 
-        li UX Design
-        li Développement web test
+    .hero
+        h2 BIENVENUE SUR LE PORTFOLIO DE SARAH HITIER
+        .logo-loader#logo-loader
+            +logo
+        ul
+            li UI Design 
+            li UX Design
+            li Développement web test
+
+    script(src="../assets/scripts/loader.js")

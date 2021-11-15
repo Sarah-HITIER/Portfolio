@@ -1,6 +1,8 @@
+const path = require("path");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const path = require("path");
+
 const config = {
     entry: {
         app: "./src/app.js"
@@ -43,7 +45,14 @@ const config = {
             },
             {
                 test: /\.pug$/,
-                use: ["pug-loader"]
+                use: [
+                    {
+                        loader: "pug-loader",
+                        options: {
+                            pretty: true
+                        }
+                    }
+                ]
             },
             {
                 test: /\.scss$/,
@@ -65,11 +74,3 @@ module.exports = (env, argv) => {
     }
     return config;
 };
-
-
-
-
-
-/*"build": "webpack --mode=production",
-        "build:dev": "webpack --mode=development",
-        "start:dev": "webpack-dev-server --mode=development"*/
