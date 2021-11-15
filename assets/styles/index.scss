@@ -1,37 +1,47 @@
 @import "import/colors";
-
+@import "import/fonts";
 .hero {
     height: calc(100vh - 90px);
     display: flex;
     align-items: center;
     justify-content: center;
 
-    h2 {
+    .hero-column {
         width: calc(100vw / 3);
+        display: none;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px;
+        font-family: "Roboto", sans-serif;
+        font-size: 32px;
+        letter-spacing: 0.25em;
+        list-style-type: none;
     }
 
-    .logo-loader-hero {
-        transition: 500ms;
-        width: calc(100vw / 3);
+    #first-column {
+        text-align: right;
+    }
+
+    .logo-loader {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        top: 0;
+        background: $black-gradient;
+    }
+
+    .logo-loader-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 500ms;
         background: transparent;
     }
 
-    ul {
-        width: calc(100vw / 3);
-    }
 }
 
-.logo-loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: calc(100%-90px);
-    width: 100vw;
-    z-index: 1;
-    top: 0;
-    background: $black-gradient;
-}
+

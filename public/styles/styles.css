@@ -5,6 +5,18 @@
 /*!******************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./assets/styles/common.scss (1) ***!
   \******************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap);
+/*!*************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./assets/styles/index.scss ***!
+  \*************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap);
+/*!*****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./assets/styles/index.scss (1) ***!
+  \*****************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap);
+/*!******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./assets/styles/common.scss (2) ***!
+  \******************************************************************************************************************************************************************/
 /* Solid colors */
 /* Gradients */
 header {
@@ -14,15 +26,20 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px; }
-  header .menu-desktop {
-    list-style-type: none; }
+  header .menu-desktop ul {
+    padding: 0;
+    display: flex; }
     header .menu-desktop ul li {
-      display: inline;
       margin: 0 12px;
-      font-family: Nunito;
-      font-size: 24px; }
+      text-align: center;
+      list-style-type: none; }
+      header .menu-desktop ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: Nunito;
+        font-size: 24px; }
       header .menu-desktop ul li svg {
-        vertical-align: middle;
+        vertical-align: bottom;
         fill: #ffffff; }
   header .settings {
     display: flex;
@@ -92,7 +109,20 @@ html body {
         width: 125%;*/
   background: linear-gradient(#262626, #000000) no-repeat;
   color: #ffffff;
-  transition: 0.5s; }
+  transition: 0.5s;
+  min-height: 100vh; }
+  html body h2 {
+    font-family: Nunito;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 60px;
+    margin-bottom: 24px; }
+  html body p, html body a {
+    font-family: Nunito;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: justify; }
 
 html .light-mode {
   background: linear-gradient(#ffffff, #d9d9d9) no-repeat;
@@ -120,9 +150,9 @@ html .light-mode {
 }
 */
 
-/*!*************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./assets/styles/index.scss ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./assets/styles/index.scss (2) ***!
+  \*****************************************************************************************************************************************************************/
 /* Solid colors */
 /* Gradients */
 .hero {
@@ -130,26 +160,104 @@ html .light-mode {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .hero h2 {
-    width: calc(100vw / 3); }
-  .hero .logo-loader-hero {
-    transition: 500ms;
+  .hero .hero-column {
     width: calc(100vw / 3);
+    display: none;
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.25em;
+    list-style-type: none; }
+  .hero #first-column {
+    text-align: right; }
+  .hero .logo-loader {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    top: 0;
+    background: linear-gradient(#262626, #000000); }
+  .hero .logo-loader-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms;
     background: transparent; }
-  .hero ul {
-    width: calc(100vw / 3); }
 
-.logo-loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  height: calc(100%-90px);
-  width: 100vw;
-  z-index: 1;
-  top: 0;
-  background: linear-gradient(#262626, #000000); }
+/*!********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./assets/styles/realisations.scss ***!
+  \********************************************************************************************************************************************************************/
+/* Solid colors */
+/* Gradients */
+.card {
+  width: 600px;
+  height: 720px;
+  margin: 94px 20px 0 40px;
+  border-radius: 20px;
+  position: relative;
+  padding: 24px 48px;
+  color: #ffffff;
+  background: radial-gradient(50% 75% at 50% 0%, #373E42 0%, #222426 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center; }
+  .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(#fff, rgba(255, 255, 255, 0.39)); }
+  .card .infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .card .infos .techno .figma {
+      width: 30px;
+      height: 30px;
+      background-color: #ffffff; }
+    .card .infos .date {
+      display: flex;
+      align-items: center;
+      gap: 2px; }
+      .card .infos .date .line {
+        width: 24px;
+        height: 1px;
+        background: #ffffff; }
+  .card .visit-button {
+    border: 1px solid white;
+    width: 150px;
+    height: 50px;
+    margin: 50px auto; }
+    .card .visit-button .visit {
+      width: 150px;
+      height: 50px;
+      margin: 0 18px;
+      position: relative;
+      text-decoration: none;
+      background-image: linear-gradient(to bottom right, #12C2E9, #C471ED, #F64F59);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent; }
+      .card .visit-button .visit:before {
+        content: '';
+        position: absolute;
+        height: 100px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        background: linear-gradient(to bottom right, #12C2E9, #C471ED, #F64F59); }
 
