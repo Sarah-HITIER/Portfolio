@@ -1,0 +1,12 @@
+mixin card(title, url)
+    .tech-card
+        h2= title
+        if block
+            block
+        else
+            div.img
+                img(src=url)
+            div.svg
+                +search
+
+

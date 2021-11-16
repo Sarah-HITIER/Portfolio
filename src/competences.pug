@@ -1,5 +1,21 @@
 extends layout
+
+include mixins/cards
+
 block content
-    h2 Compétences
-    ul
-        li Test
+    .grid 
+        +card("Figma", "../assets/images/figma.png")
+        +card("Creative Cloud", "../assets/images/creative_cloud.png")
+        +card("Canva", "../assets/images/canva.png")
+        +card("Pug" , "../assets/images/pug.png")
+        +card("Sass", "../assets/images/sass.png")
+        +card("Webpack", "../assets/images/webpack.png")
+        +card("HTML", "../assets/images/html.png")
+        +card("CSS", "../assets/images/css.png")
+        +card("JS", "../assets/images/js.png")
+        +card("PHP", "../assets/images/php.png")
+        +card("WordPress", "../assets/images/wp.png")
+        +card("Vue", "../assets/images/vue.png")
+        +card("Bootstrap", "../assets/images/bootstrap.png")
+        +card("CodeIgniter", "../assets/images/codeigniter.png")
+        +card("Office", "../assets/images/office.png")
