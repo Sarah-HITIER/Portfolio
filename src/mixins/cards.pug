@@ -1,12 +1,20 @@
-mixin card(title, url)
-    .tech-card
-        h2= title
-        if block
-            block
-        else
-            div.img
-                img(src=url)
-            div.svg
+mixin comp-card(title, width=80)
+    .card.tech-card
+        .card-element
+            h2= title
+        .card-element
+            .img
+                img(src="../assets/images/"+title+".png" width=width)
+        .card-element
+            .search
                 +search
+            
 
 
+mixin exp-card(type, date, title, desc)
+    .card.exp-card
+        .date 
+            p= date
+        p= title 
+        p= desc
+        

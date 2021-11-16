@@ -4,18 +4,21 @@ include mixins/cards
 
 block content
     .grid 
-        +card("Figma", "../assets/images/figma.png")
-        +card("Creative Cloud", "../assets/images/creative_cloud.png")
-        +card("Canva", "../assets/images/canva.png")
-        +card("Pug" , "../assets/images/pug.png")
-        +card("Sass", "../assets/images/sass.png")
-        +card("Webpack", "../assets/images/webpack.png")
-        +card("HTML", "../assets/images/html.png")
-        +card("CSS", "../assets/images/css.png")
-        +card("JS", "../assets/images/js.png")
-        +card("PHP", "../assets/images/php.png")
-        +card("WordPress", "../assets/images/wp.png")
-        +card("Vue", "../assets/images/vue.png")
-        +card("Bootstrap", "../assets/images/bootstrap.png")
-        +card("CodeIgniter", "../assets/images/codeigniter.png")
-        +card("Office", "../assets/images/office.png")
+        +comp-card("Figma", 53)
+        .creative
+            +comp-card("Creative Cloud")
+        +comp-card("Canva")
+        +comp-card("Pug", 113)
+        +comp-card("Sass")
+        +comp-card("Webpack")
+        +comp-card("HTML", 70)
+        +comp-card("CSS", 70)
+        +comp-card("JS", 70)
+        +comp-card("PHP", 147)
+        +comp-card("WordPress")
+        +comp-card("Vue")
+        +comp-card("Bootstrap")
+        +comp-card("CodeIgniter", 67)
+        +comp-card("Office")
+
+

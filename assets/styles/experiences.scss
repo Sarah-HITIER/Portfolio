@@ -1,0 +1,28 @@
+.line {
+    position: absolute;
+    margin: 93px 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.cards {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 30%;
+    z-index: 2;
+
+    .exp-card {
+        width: 356px;
+        height: 210px;
+        display: block;
+        
+
+        .date {
+            vertical-align: top;
+            width: 210px;
+            transform: rotate(-90deg);
+        }
+    }
+}

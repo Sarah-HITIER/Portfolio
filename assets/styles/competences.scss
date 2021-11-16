@@ -58,7 +58,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px solid red;
     margin: 93px auto;
     gap: 175px;
     max-width: 1220px;
@@ -67,32 +66,30 @@
         width: 290px;
         height: 290px;
         flex-grow: 0;
-        border-radius: 20px;
-        position: relative;
-        /*padding: 24px 48px;*/
-        color: $white;
-        background: radial-gradient(
-            50% 75% at 50% 0%,
-            #373e42 0%,
-            #222426 100%
-        );
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        text-align: center;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
 
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            margin: -1px;
-            border-radius: inherit;
-            background: linear-gradient(#fff, rgba(255, 255, 255, 0.39));
+        .card-element {
+            height: calc(290px/3);
+            display: flex;
+
+            & > * {
+                margin: auto;
+            }
+        }
+
+        h2 {
+            transition: 500ms;
+            opacity: 0;
+        }
+
+        .img {
+            filter: grayscale(100%);
+            transition: 500ms;
+        }
+
+        .search {
+            opacity: 0;
         }
 
         &:hover {
@@ -103,51 +100,15 @@
                 transition: 500ms;
                 opacity: 1;
             }
-            .svg {
+            .search {
                 transition: 500ms;
                 opacity: 1;
             }
         }
-
-        h2 {
-            transition: 500ms;
-            opacity: 0;
-            line-height: 60px;
-            margin: 25px 0 0;
-        }
-
-        /*Tes images n'ont pas le même ratio :( ca casse tout (surtout figma, creative cloud, codeigniter...)*/
-        .img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            top: -10%;
-            filter: grayscale(100%);
-            transition: 500ms;
-
-            img {
-                top: -100%;
-                width: 80px;
-                height: auto;
-            }
-        }
-
-        .svg {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            bottom: 35px;
-            transition: 500ms;
-            opacity: 0;
-
-            svg {
-                /*Comment on colorie seulement le contour ?? color:  ne marche pas*/
-                fill: $white;
-                width: 40px;
-                height: 40px;
-            }
+    }
+    .creative {
+        h2 { 
+            font-size: 40px;
         }
     }
 }

@@ -50,16 +50,6 @@ header {
         display: flex;
         gap: 24px;
 
-        .search {
-            circle {
-                stroke: $white;
-            }
-
-            path {
-                fill: $white;
-            }
-        }
-
         .toggle {
             width: 55px;
             height: 30px;

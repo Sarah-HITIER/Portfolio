@@ -1,5 +1,17 @@
 extends layout
+
+include mixins/cards
+
 block content
-    h2 Expériences
-    ul
-        li Test
+    .line
+        svg(width='604' height='2261' viewbox='0 0 604 2261' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M602 0V185.567C602 213.181 579.614 235.567 552 235.567H494.166H52C24.3857 235.567 2 257.952 2 285.567V542.219C2 569.833 24.3858 592.219 52 592.219H552C579.614 592.219 602 614.605 602 642.219V898.871C602 926.486 579.614 948.871 552 948.871H52C24.3858 948.871 2 971.257 2 998.871V1255.52C2 1283.14 24.3858 1305.52 52 1305.52H552C579.614 1305.52 602 1327.91 602 1355.52V1612.18C602 1639.79 579.614 1662.18 552 1662.18H52C24.3858 1662.18 2 1684.56 2 1712.18V1968.83C2 1996.44 24.3858 2018.83 52 2018.83H552C579.614 2018.83 602 2041.21 602 2068.83V2261' stroke='url(#paint0_linear_292_1337)' stroke-width='3')
+            defs
+                lineargradient#paint0_linear_292_1337(x1='2' y1='0' x2='616.92' y2='2256.93' gradientunits='userSpaceOnUse')
+                    stop(stop-color='#12C2E9')
+                    stop(offset='0.5' stop-color='#C471ED')
+                    stop(offset='1' stop-color='#F64F59')
+
+    .cards
+        +exp-card("work", "2021 - 2022", "BenchDATA (77)", "Alternance chef de projet")
+
