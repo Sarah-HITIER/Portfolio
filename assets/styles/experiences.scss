@@ -1,28 +1,267 @@
-.line {
+@import "import/colors";
+
+/*.menu-desktop {
+    .exp {
+        font-weight: 800;
+    }
+}*/
+
+.timeline {
     position: absolute;
-    margin: 93px 0;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 1;
+    left: 0;
+    right: 0;
+    z-index: -3;
 }
 
 .cards {
-    position: absolute;
-    display: block;
-    left: 50%;
-    top: 30%;
-    z-index: 2;
+    .card-content {
+        position: relative;
+    }
+
+    .icon-container {
+        position: absolute;
+        z-index: 1;
+
+        .icon {
+            position: relative;
+            border-radius: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
     .exp-card {
-        width: 356px;
-        height: 210px;
-        display: block;
-        
+        .content {
+            display: grid;
+            grid-auto-rows: minmax(min-content, max-content);
+            grid-template-columns: auto 1fr;
 
-        .date {
-            vertical-align: top;
-            width: 210px;
-            transform: rotate(-90deg);
+            .date {
+                transform: rotate(180deg);
+                writing-mode: vertical-lr;
+
+                p {
+                    text-align: center;
+                    background: linear-gradient(
+                        to bottom right,
+                        #12c2e9,
+                        #c471ed,
+                        #f64f59
+                    );
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: transparent;
+                }
+            }
+
+            .text {
+                margin: auto 14px auto 0;
+
+                p {
+                    text-align: left;
+                }
+
+                .desc {
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1225px) {
+    .timeline {
+        width: 600px;
+        height: 2260px;
+        margin: 93px auto;
+    }
+
+    .cards {
+        margin: 225px 0;
+
+        .card-content {
+            width: 356px;
+            height: 210px;
+            margin: 0 auto 143px;
+
+            &:nth-child(odd) {
+                left: -290px;
+            }
+
+            &:nth-child(even) {
+                left: 290px;
+            }
+
+            &:nth-child(5) {
+                .title {
+                    line-height: 32px;
+                }
+            }
+
+            .icon-container {
+                top: -25px;
+                right: 50px;
+
+                .icon {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+
+        .exp-card {
+            .date {
+                height: 210px;
+            }
+
+            .text {
+                margin: auto 14px auto 0;
+
+                .desc {
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1224px) {
+    .timeline {
+        width: 520px;
+        height: 1960px;
+        margin: 60px auto;
+    }
+
+    .cards {
+        margin: 175px 0;
+
+        .card-content {
+            width: 325px;
+            height: 180px;
+            margin: 0 auto 125px;
+
+            &:nth-child(odd) {
+                left: -250px;
+            }
+
+            &:nth-child(even) {
+                left: 250px;
+            }
+
+            &:nth-child(5) {
+                .title {
+                    line-height: 28px;
+                }
+            }
+
+            .exp-card {
+                .date {
+                    height: 180px;
+                }
+
+                .text {
+                    margin: auto 14px auto 0;
+
+                    .desc {
+                        line-height: 26px;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+
+            .icon-container {
+                top: -22.5px;
+                right: 40px;
+
+                .icon {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline {
+        width: 257px;
+        height: 1027px;
+        margin: 38px auto;
+    }
+
+    .cards {
+        margin: 75px 0;
+        padding-bottom: 1px;
+
+        .card-content {
+            width: 255px;
+            height: 130px;
+            margin: 0 auto 15px;
+
+            .exp-card {
+                .date {
+                    height: 130px;
+                }
+
+                .text {
+                    margin: auto 10px auto 0;
+
+                    .desc {
+                        line-height: 22px;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                .date p,
+                .title {
+                    line-height: 32px;
+                }
+            }
+
+            .icon-container {
+                top: -20px;
+                right: 30px;
+
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &:nth-child(odd) {
+                left: -125px;
+            }
+
+            &:nth-child(even) {
+                left: 125px;
+            }
+
+            &:nth-child(5) {
+                height: 150px;
+
+                .date {
+                    height: 150px;
+                }
+
+                .title {
+                    line-height: 24px;
+                }
+            }
+
+            &:nth-child(6) {
+                height: 150px;
+
+                .date {
+                    height: 150px;
+                }
+            }
         }
     }
 }

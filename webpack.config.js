@@ -21,8 +21,16 @@ const config = {
             template: "src/index.pug"
         }),
         new HtmlWebpackPlugin({
-            filename: "realisations.html",
-            template: "src/realisations.pug"
+            filename: "benchkatalog.html",
+            template: "src/benchkatalog.pug"
+        }),
+        new HtmlWebpackPlugin({
+            filename: "etais-la-sauvin.html",
+            template: "src/etais-la-sauvin.pug"
+        }),
+        new HtmlWebpackPlugin({
+            filename: "quizzy.html",
+            template: "src/quizzy.pug"
         }),
         new HtmlWebpackPlugin({
             filename: "competences.html",

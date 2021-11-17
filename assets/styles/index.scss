@@ -1,13 +1,12 @@
 @import "import/colors";
 @import "import/fonts";
+
 .hero {
-    height: calc(100vh - 90px);
     display: flex;
     align-items: center;
     justify-content: center;
 
     .hero-column {
-        width: calc(100vw / 3);
         display: none;
         flex-direction: column;
         gap: 50px;
@@ -41,7 +40,45 @@
         transition: 500ms;
         background: transparent;
     }
-
 }
 
+@media screen and (min-width: 1225px) {
+    .hero {
+        height: calc(100vh - 90px);
+        flex-direction: row;
 
+        .hero-column {
+            width: calc(100vw / 3);
+            gap: 50px;
+            padding: 100px;
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1224px) {
+    .hero {
+        height: calc(100vh - 90px);
+        flex-direction: row;
+
+        .hero-column {
+            width: calc(100vw / 3);
+            gap: 50px;
+            padding: 100px;
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+
+        .hero-column {
+            height: 285px;
+            gap: 20px;
+            padding: 20px;
+            font-size: 20px;
+        }
+    }
+}

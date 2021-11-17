@@ -1,3 +1,5 @@
+include icons/icons
+
 mixin comp-card(title, width=80)
     .card.tech-card
         .card-element
@@ -8,13 +10,16 @@ mixin comp-card(title, width=80)
         .card-element
             .search
                 +search
-            
-
 
 mixin exp-card(type, date, title, desc)
-    .card.exp-card
-        .date 
-            p= date
-        p= title 
-        p= desc
-        
+    .card-content 
+        .icon-container
+            .icon.card 
+                +exp-icon(type)
+        .card.exp-card
+            .content 
+                .date 
+                    p= date
+                .text
+                    p.title= title 
+                    p.desc= desc

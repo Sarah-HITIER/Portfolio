@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .real-content
+        .card.real-card
+            .project-item 
+                .description
+                    h2 Site web d’Étais la Sauvin
+                    p Ce projet consistait à créer un site web afin d’aider les élus de la mairie à informer la population et à promouvoir des évènements entre autres.
+                    .infos
+                        .techno 
+                            .figma 
+                        .date 
+                            .line
+                            p 2020/2021
+                a.visit(href="https://etais-la-sauvin.fr/") Voir le site
+                .projects 
+                    .buttons
+                        a.button-projects(href="benchkatalog.html")
+                            +previous-projects
+                        a.button-projects(href="quizzy.html")
+                            +next-projects
+                    p.number 2 / 3
+        .ordi
+            img(src="../assets/images/real-2.png" alt="Site BenchKATALOG")

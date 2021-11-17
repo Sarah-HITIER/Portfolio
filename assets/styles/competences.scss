@@ -1,5 +1,83 @@
 @import "import/colors";
 
+/*.menu-desktop {
+    .comp {
+        font-weight: 800;
+    }
+}*/
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 93px auto;
+    gap: 175px;
+    max-width: 1220px;
+
+    .tech-card {
+        width: 290px;
+        height: 290px;
+        flex-grow: 0;
+        display: flex;
+        align-items: center;
+
+        .card-element {
+            height: calc(290px / 3);
+            display: flex;
+
+            & > * {
+                margin: auto;
+            }
+        }
+
+        h2 {
+            transition: 500ms;
+            opacity: 0;
+        }
+
+        .img {
+            filter: grayscale(100%);
+            transition: 500ms;
+        }
+
+        .search {
+            opacity: 0;
+        }
+
+        &:hover {
+            .img {
+                filter: grayscale(0);
+            }
+            h2 {
+                transition: 500ms;
+                opacity: 1;
+            }
+            .search {
+                transition: 500ms;
+                opacity: 1;
+            }
+        }
+    }
+    .creative {
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 1225px) {
+    .grid {
+        padding: 0 20px;
+        gap: 8vh !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1224px) {
+    .grid {
+        justify-content: space-evenly !important;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .grid {
         margin: 20px !important;
@@ -37,78 +115,6 @@
                     height: auto !important;
                 }
             }
-        }
-    }
-}
-
-@media screen and (min-width: 1085px) and (max-width: 1220px) {
-    .grid {
-        padding: 0 20px;
-        gap: 8vh !important;
-    }
-}
-
-@media screen and (min-width: 729px) and (max-width: 1084px) {
-    .grid {
-        justify-content: space-evenly !important;
-    }
-}
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 93px auto;
-    gap: 175px;
-    max-width: 1220px;
-
-    .tech-card {
-        width: 290px;
-        height: 290px;
-        flex-grow: 0;
-        display: flex;
-        align-items: center;
-
-        .card-element {
-            height: calc(290px/3);
-            display: flex;
-
-            & > * {
-                margin: auto;
-            }
-        }
-
-        h2 {
-            transition: 500ms;
-            opacity: 0;
-        }
-
-        .img {
-            filter: grayscale(100%);
-            transition: 500ms;
-        }
-
-        .search {
-            opacity: 0;
-        }
-
-        &:hover {
-            .img {
-                filter: grayscale(0);
-            }
-            h2 {
-                transition: 500ms;
-                opacity: 1;
-            }
-            .search {
-                transition: 500ms;
-                opacity: 1;
-            }
-        }
-    }
-    .creative {
-        h2 { 
-            font-size: 40px;
         }
     }
 }

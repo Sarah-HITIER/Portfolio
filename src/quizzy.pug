@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .real-content
+        .card.real-card
+            .project-item 
+                .description
+                    h2 Application web Quizzy
+                    p Cette application, codée en utilisant le Framework CodeIgniter, permet à des professeurs inscrits sur le site de créer des quizz. Leurs élèves peuvent ensuite y répondre et les professeurs ont accès à leurs résultats.
+                    .infos
+                        .techno 
+                            .figma 
+                        .date 
+                            .line
+                            p 2020
+                a.visit(href="http://dwarves.iut-fbleau.fr/~hitier/Projet_Quizzy/CI/") Voir le site
+                .projects 
+                    .buttons
+                        a.button-projects(href="etais-la-sauvin.html")
+                            +previous-projects
+                        a.button-projects(href="benchkatalog.html")
+                            +next-projects
+                    p.number 3 / 3
+        .ordi
+            img(src="../assets/images/real-3.png" alt="Application Quizzy")
