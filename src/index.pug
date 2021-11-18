@@ -4,12 +4,18 @@ include mixins/icons/logo
 
 block content
     .hero
-        p.hero-column#first-column BIENVENUE SUR LE PORTFOLIO DE SARAH HITIER
+        .hero-column
+            p BIENVENUE 
+            p SUR 
+            p LE 
+            p PORTFOLIO 
+            p DE 
+            p SARAH 
+            p HITIER
         #logo-loader.logo-loader
             +logo
-        ul.hero-column
+        ul.hero-column#last-hero
             li UX Design 
             li UI Design
             li Développement web
 
-    script(src="../assets/scripts/loader.js")

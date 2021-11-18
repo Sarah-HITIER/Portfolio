@@ -7,7 +7,13 @@ html
     body
         block header
             include includes/header
-        block content
+        block header-mobile 
+            include includes/header-mobile
+        .page-content
+            block content
         block footer
+            include includes/footer
 
         script(src="../assets/scripts/mode.js")
+        script(src="../assets/scripts/loader.js")
+

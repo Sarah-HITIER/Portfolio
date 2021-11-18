@@ -8,17 +8,16 @@
 
     .hero-column {
         display: none;
-        flex-direction: column;
-        gap: 50px;
-        padding: 100px;
-        font-family: "Roboto", sans-serif;
-        font-size: 32px;
-        letter-spacing: 0.25em;
         list-style-type: none;
-    }
+        flex-direction: column;
+        padding: 0;
 
-    #first-column {
-        text-align: right;
+        p,
+        li {
+            font-family: "Roboto", sans-serif;
+            font-size: 32px;
+            letter-spacing: 0.25em;
+        }
     }
 
     .logo-loader {
@@ -30,7 +29,7 @@
         width: 100vw;
         z-index: 1;
         top: 0;
-        background: $black-gradient;
+        background: transparent;
     }
 
     .logo-loader-hero {
@@ -46,12 +45,40 @@
     .hero {
         height: calc(100vh - 90px);
         flex-direction: row;
+        gap: 8vw;
 
         .hero-column {
-            width: calc(100vw / 3);
-            gap: 50px;
-            padding: 100px;
+            width: 310;
+            gap: 20px;
             font-size: 32px;
+
+            p {
+                &:nth-child(1) {
+                    margin-left: 10vw;
+                }
+                &:nth-child(2) {
+                    margin-left: 20vw;
+                }
+                &:nth-child(3) {
+                    margin-left: 15vw;
+                }
+                &:nth-child(4) {
+                    margin-left: 8vw;
+                }
+                &:nth-child(5) {
+                    margin-left: 22vw;
+                }
+                &:nth-child(6) {
+                    margin-left: 10vw;
+                }
+                &:nth-child(7) {
+                    margin-left: 18vw;
+                }
+            }
+        }
+
+        #last-hero {
+            gap: 32px;
         }
     }
 }
@@ -60,12 +87,57 @@
     .hero {
         height: calc(100vh - 90px);
         flex-direction: row;
+        gap: 5vw;
 
         .hero-column {
-            width: calc(100vw / 3);
-            gap: 50px;
-            padding: 100px;
+            width: 310;
+            gap: 20px;
             font-size: 32px;
+
+            p,
+            li {
+                font-family: "Roboto", sans-serif;
+                font-size: 24px;
+                line-height: 40px;
+                letter-spacing: 0.25em;
+            }
+
+            p {
+                &:nth-child(1) {
+                    margin-left: 10vw;
+                }
+                &:nth-child(2) {
+                    margin-left: 20vw;
+                }
+                &:nth-child(3) {
+                    margin-left: 15vw;
+                }
+                &:nth-child(4) {
+                    margin-left: 8vw;
+                }
+                &:nth-child(5) {
+                    margin-left: 22vw;
+                }
+                &:nth-child(6) {
+                    margin-left: 10vw;
+                }
+                &:nth-child(7) {
+                    margin-left: 18vw;
+                }
+            }
+        }
+        .logo-loader,
+        .logo-loader-hero {
+            width: 250px;
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        #last-hero {
+            gap: 32px;
         }
     }
 }
@@ -73,12 +145,60 @@
 @media screen and (max-width: 768px) {
     .hero {
         flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
 
         .hero-column {
-            height: 285px;
-            gap: 20px;
-            padding: 20px;
+            /*height: 285px;*/
             font-size: 20px;
+            width: 100%;
+            /*align-items: center;*/
+
+            p,
+            li {
+                font-family: "Roboto", sans-serif;
+                font-size: 20px;
+                line-height: 40px;
+                letter-spacing: 0.25em;
+            }
+
+            p {
+                &:nth-child(1) {
+                    margin-left: 20vw;
+                }
+                &:nth-child(2) {
+                    margin-left: 70vw;
+                }
+                &:nth-child(3) {
+                    margin-left: 50vw;
+                }
+                &:nth-child(4) {
+                    margin-left: 10vw;
+                }
+                &:nth-child(5) {
+                    margin-left: 65vw;
+                }
+                &:nth-child(6) {
+                    margin-left: 25vw;
+                }
+                &:nth-child(7) {
+                    margin-left: 55vw;
+                }
+            }
+        }
+
+        #last-hero {
+            text-align: center;
+        }
+
+        .logo-loader,
+        .logo-loader-hero {
+            width: 150px;
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }

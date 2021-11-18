@@ -58,7 +58,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 0 auto;
+                margin: 10px auto;
                 position: relative;
                 z-index: 0;
 
@@ -117,42 +117,49 @@
             }
         }
     }
+
+    .ordi {
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (min-width: 1225px) {
     .real-content {
-        margin: 40px;
+        margin: 40px 8vw;
         .real-card {
-            width: 600px;
-            height: 720px;
-            margin-right: 20px;
+            width: 38vw;
+            margin-right: 2vw;
 
             .project-item {
-                margin: 24px 48px;
+                margin: 24px 48px 0;
 
                 .visit {
                     width: 150px;
                     height: 50px;
                 }
+
+                .projects {
+                    font-size: 20px;
+                }
             }
         }
 
         .ordi {
-            img {
-                width: 100%;
-                margin: auto;
-            }
+            width: 58vw;
         }
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1224px) {
     .real-content {
-        margin: 20px;
+        margin: 20px 0vw;
 
         .real-card {
             width: 100%;
-            height: 391px;
             margin-right: 15px;
 
             .project-item {
@@ -189,7 +196,7 @@
                 }
 
                 .projects {
-                    font-size: 14px;
+                    font-size: 17px;
 
                     .buttons {
                         height: 30px;
@@ -214,11 +221,6 @@
 
         .ordi {
             margin-bottom: 20px;
-
-            img {
-                width: 100%;
-                margin: auto;
-            }
         }
     }
 }
@@ -230,7 +232,6 @@
 
         .real-card {
             width: 100%;
-            height: 391px;
 
             .project-item {
                 margin: 10px 20px;
@@ -292,11 +293,6 @@
 
         .ordi {
             margin-bottom: 20px;
-
-            img {
-                width: 100%;
-                margin: auto;
-            }
         }
     }
 }

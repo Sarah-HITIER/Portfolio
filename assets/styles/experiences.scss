@@ -6,7 +6,8 @@
     }
 }*/
 
-.timeline {
+.timeline,
+.timeline-mobile {
     position: absolute;
     left: 0;
     right: 0;
@@ -77,6 +78,10 @@
         margin: 93px auto;
     }
 
+    .timeline-mobile {
+        display: none;
+    }
+
     .cards {
         margin: 225px 0;
 
@@ -133,6 +138,10 @@
         margin: 60px auto;
     }
 
+    .timeline-mobile {
+        display: none;
+    }
+
     .cards {
         margin: 175px 0;
 
@@ -187,10 +196,24 @@
 }
 
 @media screen and (max-width: 768px) {
+    /*.timeline {
+        width: 60%;
+        height: 2000px;
+        padding: 38px 20%;
+
+        svg {
+            height: 100%;
+        }
+    }*/
     .timeline {
-        width: 257px;
+        display: none;
+    }
+
+    .timeline-mobile {
+        width: 259px;
         height: 1027px;
-        margin: 38px auto;
+        margin: 40px auto;
+        /*padding: 40px, 60px;*/
     }
 
     .cards {
@@ -198,9 +221,9 @@
         padding-bottom: 1px;
 
         .card-content {
-            width: 255px;
+            width: 235px;
             height: 130px;
-            margin: 0 auto 15px;
+            margin: 0 0 35px;
 
             .exp-card {
                 .date {
@@ -236,18 +259,23 @@
             }
 
             &:nth-child(odd) {
-                left: -125px;
+                left: 20px;
             }
 
             &:nth-child(even) {
-                left: 125px;
+                left: 118px;
+            }
+
+            &:nth-child(4) {
+                margin: 0 0 27px;
             }
 
             &:nth-child(5) {
-                height: 150px;
+                height: 140px;
+                margin: 0 0 18px;
 
                 .date {
-                    height: 150px;
+                    height: 140px;
                 }
 
                 .title {
@@ -256,10 +284,10 @@
             }
 
             &:nth-child(6) {
-                height: 150px;
+                height: 140px;
 
                 .date {
-                    height: 150px;
+                    height: 140px;
                 }
             }
         }

@@ -1,6 +1,7 @@
 @import "import/colors";
 @import "import/fonts";
 @import "import/header";
+@import "import/footer";
 
 * {
     margin: 0;
@@ -17,7 +18,8 @@ html {
         /*transform: scale(0.8);
         transform-origin: 0 0;
         width: 125%;*/
-        background: $black-gradient no-repeat;
+        background: $black-gradient;
+        background-attachment: fixed;
         color: $white;
         transition: 0.5s;
         min-height: 100vh;
@@ -81,8 +83,21 @@ html {
     }
 
     .light-mode {
-        background: $white-gradient no-repeat;
+        background: $white-gradient;
+        background-attachment: fixed;
         color: $black;
+    }
+}
+
+@media screen and (min-width: 1225px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1224px) {
+}
+
+@media screen and (max-width: 768px) {
+    .page-content {
+        padding-top: 100px;
     }
 }
 
