@@ -149,7 +149,7 @@
     top: 0;
     z-index: 5; }
     #header-mobile .header-background {
-      background-image: url(../c0448c7ab9afbe527f08.svg);
+      background-image: url(../51fe7b511e494ef01e4b.svg);
       background-repeat: no-repeat;
       width: 100%;
       /*background-position: fixed;*/ } }
@@ -166,7 +166,8 @@
   #footer .cv,
   #footer .linkedin {
     /*filter: grayscale(1);*/
-    height: 30px; }
+    height: 30px;
+    fill: url(#white_rect); }
     #footer .cv:hover svg rect,
     #footer .linkedin:hover svg rect {
       fill: "url(#colored_rect)"; }
