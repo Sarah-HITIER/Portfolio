@@ -20,7 +20,9 @@
 /* Solid colors */
 /* Gradients */
 header {
-  width: 100%; }
+  width: 100%;
+  position: fixed;
+  z-index: 10; }
   header #header {
     border-bottom: 1px solid #ffffff;
     height: 89px;
@@ -145,34 +147,137 @@ header {
         }*/ }
       header .menu-desktop {
         display: none; }
+      header .menu-mobile {
+        display: block; }
+        header .menu-mobile ul {
+          display: flex;
+          flex-direction: column; }
+          header .menu-mobile ul .svg-circle {
+            display: none; }
       header .hamburger {
         width: 28px;
-        height: 28px; }
+        height: 28px;
+        /*
+            .hamburger-button:checked ~ .hamburger-lines {
+                span {
+                    border-radius: 3px;
+                    transform: rotate(45deg) translate(2px, 1px);
+                }
+            }
+
+            .hamburger-button:checked ~ .hamburger-lines {
+                span:nth-last-child(2) {
+                    width: 20px;
+                    transform: rotate(-45deg) translate(-6px, 6px);
+                }
+            }
+
+            .hamburger-button:checked ~ .hamburger-lines {
+                span:nth-last-child(1) {
+                    opacity: 0;
+                    transform: rotate(0deg) scale(0.2, 0.2);
+                }
+            }*/ }
         header .hamburger .hamburger-button {
           width: 28px;
           height: 28px;
           position: absolute;
           text-align: end;
-          opacity: 0; }
+          opacity: 0;
+          z-index: 2; }
         header .hamburger .hamburger-lines {
           width: 100%;
           height: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          justify-content: space-evenly; }
+          position: relative;
+          /*display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-evenly;
+                background-color: transparent;*/
+          /*
+                span {
+                    height: 2px;
+                    background: $white;
+                    border-radius: 3px 0 0 3px;
+                    transform-origin: 4px 0px;
+                    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                        opacity 0.55s ease;
+
+                    &:nth-child(1) {
+                        width: 20px;
+                        transform-origin: 0% 0%;
+                    }
+                    &:nth-child(2) {
+                        width: 16px;
+                        transform-origin: 0% 100%;
+                    }
+                    &:nth-child(3) {
+                        width: 12px;
+                    }
+                }*/ }
           header .hamburger .hamburger-lines span {
             height: 2px;
             background: #ffffff;
             border-radius: 3px 0 0 3px;
-            transform-origin: 4px 0px;
-            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+            position: absolute;
+            right: 0;
+            /*transform-origin: 4px 0px;
+                    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                        opacity 0.55s ease;*/ }
             header .hamburger .hamburger-lines span:nth-child(1) {
-              width: 20px; }
+              width: 20px;
+              /*transform-origin: 0% 0%;*/
+              top: 6px;
+              transition-duration: 0.3s, 0.3s;
+              transition-delay: 0.3s, 0s;
+              transition-property: top, transform; }
             header .hamburger .hamburger-lines span:nth-child(2) {
-              width: 16px; }
+              width: 16px;
+              top: 14px;
+              transition: background 0s 0.3s;
+              /*transform-origin: 0% 100%;*/ }
             header .hamburger .hamburger-lines span:nth-child(3) {
-              width: 12px; } }
+              width: 12px;
+              top: 22px;
+              transition-duration: 0.3s, 0.3s;
+              transition-delay: 0.3s, 0s;
+              transition-property: all, transform; }
+        header .hamburger .menu-desktop {
+          position: fixed;
+          z-index: 5;
+          background: linear-gradient(#262626, #000000);
+          transition: width 0.3s, height 0.3s;
+          width: 0;
+          height: 0;
+          top: 89px;
+          right: 0px;
+          transform-origin: 100% 0%;
+          border-bottom-left-radius: 300px;
+          border: solid #ffffff;
+          border-width: 0 0 1px 1px;
+          background: linear-gradient(180deg, #262626 -115%, #000000 725%); }
+          header .hamburger .menu-desktop a {
+            font-size: 16px;
+            line-height: 32px; }
+        header .hamburger .hamburger-button:checked ~ .hamburger-lines span {
+          border-radius: 3px; }
+          header .hamburger .hamburger-button:checked ~ .hamburger-lines span:nth-child(1) {
+            top: 14px;
+            transform: rotate(45deg);
+            transition-delay: 0s, 0.3s; }
+          header .hamburger .hamburger-button:checked ~ .hamburger-lines span:nth-child(2) {
+            background: none; }
+          header .hamburger .hamburger-button:checked ~ .hamburger-lines span:nth-child(3) {
+            width: 20px;
+            top: 14px;
+            transform: rotate(-45deg);
+            transition-delay: 0s, 0.3s; }
+        header .hamburger .hamburger-button:checked ~ .menu-desktop {
+          width: 215px;
+          height: 140px;
+          border-bottom-left-radius: 300px; } }
 
 #footer {
   display: flex;
@@ -305,7 +410,7 @@ html .light-mode {
 
 @media screen and (max-width: 768px) {
   .page-content {
-    padding-top: 100px; } }
+    margin-top: 89px; } }
 
 /*
 @media (prefers-color-scheme: dark) {
@@ -945,9 +1050,9 @@ html .light-mode {
           width: 40px;
           height: 40px; }
       .cards .card-content:nth-child(odd) {
-        left: 20px; }
+        left: -50px; }
       .cards .card-content:nth-child(even) {
-        left: 118px; }
+        left: 50px; }
       .cards .card-content:nth-child(4) {
         margin: 0 0 27px; }
       .cards .card-content:nth-child(5) {
