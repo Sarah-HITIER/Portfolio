@@ -1,11 +1,5 @@
 @import "import/colors";
 
-/*.menu-desktop {
-    .comp {
-        font-weight: 800;
-    }
-}*/
-
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -195,6 +189,16 @@
         .creative {
             h2 {
                 font-size: 22px !important;
+            }
+        }
+    }
+}
+
+.light-mode {
+    .cards {
+        .icon {
+            path {
+                fill: black;
             }
         }
     }

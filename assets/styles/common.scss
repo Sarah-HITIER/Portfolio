@@ -24,6 +24,12 @@ html {
         transition: 0.5s;
         min-height: 100vh;
 
+        header {
+            .active {
+                font-weight: 800;
+            }
+        }
+
         h2 {
             font-family: Nunito;
             font-size: 48px;
@@ -86,6 +92,15 @@ html {
         background: $white-gradient;
         background-attachment: fixed;
         color: $black;
+
+        .card {
+            color: $black;
+            background: radial-gradient(
+                50% 75% at 50% 0%,
+                #ffffff 0%,
+                #f2f2f2 100%
+            );
+        }
     }
 }
 

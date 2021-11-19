@@ -10,17 +10,7 @@
 
     .cv,
     .linkedin {
-        /*filter: grayscale(1);*/
         height: 30px;
-        fill: url(#white_rect);
-
-        &:hover {
-            svg {
-                rect {
-                    fill: "url(#colored_rect)";
-                }
-            }
-        }
 
         a {
             height: 100%;
@@ -37,5 +27,8 @@
 
 .light-mode {
     #footer {
+        .footer-line {
+            background: $black;
+        }
     }
 }
