@@ -2,16 +2,22 @@ include ../mixins/icons/icons
 include ../mixins/icons/logo
 include ../mixins/menu/menu
 
-header#header
-    a(href="index.html").logo-header
-        +logo-header
-    .menu-desktop
-        +menu-desktop
-    .settings
-        .search 
-            +search
-        .toggle
-            input#darkmode(type="checkbox" checked="true")
-            label.toggle-item(for="darkmode")
-                .check
-
+header
+    #header
+        a(href="index.html").logo-header
+            +logo-header
+        .menu-desktop
+            +menu-desktop
+        .settings
+            .search 
+                +search
+            .toggle
+                input#darkmode(type="checkbox" checked="true")
+                label.toggle-item(for="darkmode")
+                    .check
+            .hamburger 
+                input.hamburger-button(type="checkbox")
+                .hamburger-lines 
+                    span
+                    span 
+                    span 

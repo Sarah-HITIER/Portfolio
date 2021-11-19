@@ -1,27 +1,15 @@
-#footer {
+#footer {    
     display: flex;
-    flex-direction: column;
-    gap: 10px;
     align-items: center;
-    position: fixed;
-    height: 120px;
     bottom: 0;
-    left: 40px;
-
-    .cv,
-    .linkedin {
-        height: 30px;
-
-        a {
-            height: 100%;
-            line-height: 0;
-        }
-    }
 
     .footer-line {
-        width: 1px;
-        height: 60px;
         background: $white;
+    }
+
+    a {
+        height: 100%;
+        line-height: 0;
     }
 }
 
@@ -29,6 +17,76 @@
     #footer {
         .footer-line {
             background: $black;
+        }
+    }
+}
+
+@media screen and (min-width: 1225px) {
+    #footer {
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        left: 40px; 
+
+        #first-line {
+            display: none;
+        }
+
+        .cv,
+        .linkedin {
+            height: 30px; 
+        }
+    
+        .footer-line {
+            width: 1px;
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1224px) {
+    #footer {
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        left: 40px; 
+
+        #first-line {
+            display: none;
+        }
+
+        .cv,
+        .linkedin {
+            height: 30px; 
+        }
+    
+        .footer-line {
+            width: 1px;
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #footer {
+        flex-direction: row;
+        gap: 20px;
+        /*position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);*/
+        
+        .footer-line {
+            width: 70px;
+            height: 1px;
+        }
+
+        .cv, .linkedin {
+            height: 28px; 
+    
+            svg {
+                width: 28px;
+                height: 28px;
+            }
         }
     }
 }

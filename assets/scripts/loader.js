@@ -1,6 +1,5 @@
 /**
- * Retirer le header et le footer pendant le loader puis
- * d'afficher la page index quand le loader est fini
+ * Retirer le header et le footer pendant le loader puis d'afficher la page index quand le loader est fini
  */
 (function () {
     if (
@@ -31,8 +30,7 @@
 })();
 
 /**
- * Ajouter la classe "active" sur le lien de la page
- * courante
+ * Ajouter la classe "active" sur le lien de la page courante
  */
 (function () {
     let real_link = document.getElementById("real_link");

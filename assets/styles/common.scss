@@ -23,6 +23,11 @@ html {
         color: $white;
         transition: 0.5s;
         min-height: 100vh;
+        position: relative;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        justify-content: space-between;
 
         header {
             .active {
@@ -86,6 +91,7 @@ html {
                 background: linear-gradient(#fff, rgba(0, 0, 0, 0));
             }
         }
+
     }
 
     .light-mode {
