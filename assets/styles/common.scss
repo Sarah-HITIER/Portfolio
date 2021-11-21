@@ -1,7 +1,6 @@
-@import "import/colors";
-@import "import/fonts";
-@import "import/header";
-@import "import/footer";
+/**
+ * CSS COMMUN À TOUTES LES PAGES
+ */
 
 * {
     margin: 0;
@@ -15,9 +14,6 @@
 
 html {
     body {
-        /*transform: scale(0.8);
-        transform-origin: 0 0;
-        width: 125%;*/
         background: $black-gradient;
         background-attachment: fixed;
         color: $white;
@@ -29,13 +25,17 @@ html {
         align-items: center;
         justify-content: space-between;
 
+        .page-content {
+            margin-top: 89px;
+        }
+
         header {
             .active {
                 font-weight: 800;
             }
         }
 
-        h2 {
+        h1 {
             font-family: Nunito;
             font-size: 48px;
             font-weight: 800;
@@ -108,51 +108,3 @@ html {
         }
     }
 }
-
-@media screen and (min-width: 1225px) {
-}
-
-@media screen and (min-width: 769px) and (max-width: 1224px) {
-}
-
-@media screen and (max-width: 768px) {
-    .page-content {
-        margin-top: 89px;
-    }
-}
-
-/*
-@media (prefers-color-scheme: dark) {
-    * {
-        color: $white;
-    }
-
-    body {
-        background: $black-gradient no-repeat;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    * {
-        color: $black;
-    }
-
-    body {
-        background: $white-gradient no-repeat;
-    }
-}
-*/
-
-/*
-.card {
-    width: 600px;
-    height: 720px;
-    margin: 94px 20px 0 40px;
-    padding: 24px 48px;
-}
-
-.card {
-    width: 290px;
-    height: 290px;
-    flex-grow: 0;
-}*/

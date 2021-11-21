@@ -1,5 +1,3 @@
-@import "import/colors";
-
 .real-content {
     display: flex;
     flex-direction: row;
@@ -19,10 +17,18 @@
                 align-items: center;
 
                 .techno {
-                    .figma {
-                        width: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 24px;
+
+                    .item-techno {
+                        width: fit-content;
                         height: 30px;
-                        background-color: $white;
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
                     }
                 }
                 .date {
@@ -121,6 +127,18 @@
     }
 }
 
+.light-mode {
+    .real-card {
+        .infos {
+            .date {
+                .line {
+                    background: $black !important;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1225px) {
     .real-content {
         margin: 40px 8vw;
@@ -131,13 +149,13 @@
             .project-item {
                 margin: 24px 48px 0;
 
+                .projects {
+                    font-size: 20px;
+                }
+
                 .visit {
                     width: 150px;
                     height: 50px;
-                }
-
-                .projects {
-                    font-size: 20px;
                 }
             }
         }
@@ -160,7 +178,7 @@
                 margin: 10px 20px;
 
                 .description {
-                    h2 {
+                    h1 {
                         font-size: 24px;
                         line-height: 40px;
                     }
@@ -171,9 +189,12 @@
                     }
 
                     .infos {
-                        .figma {
-                            width: 25px;
-                            height: 25px;
+                        .techno {
+                            .item-techno {
+                                width: 25px;
+                                height: 25px;
+                                gap: 20px;
+                            }
                         }
 
                         .date {
@@ -231,7 +252,7 @@
                 margin: 10px 20px;
 
                 .description {
-                    h2 {
+                    h1 {
                         font-size: 24px;
                         line-height: 40px;
                         margin-bottom: 0;
@@ -243,9 +264,13 @@
                     }
 
                     .infos {
-                        .figma {
-                            width: 25px;
-                            height: 25px;
+                        .techno {
+                            gap: 12px;
+
+                            .item-techno {
+                                width: 25px;
+                                height: 25px;
+                            }
                         }
 
                         .date {

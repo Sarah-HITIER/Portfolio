@@ -1,15 +1,26 @@
-#footer {    
+footer {
     display: flex;
-    align-items: center;
-    bottom: 0;
+    flex-direction: column;
 
-    .footer-line {
-        background: $white;
+    #footer {
+        display: flex;
+        align-items: center;
+        bottom: 0;
+
+        .footer-line {
+            background: $white;
+        }
+
+        a {
+            height: 100%;
+            line-height: 0;
+        }
     }
 
-    a {
-        height: 100%;
-        line-height: 0;
+    .copyright {
+        p {
+            text-align: center;
+        }
     }
 }
 
@@ -26,7 +37,7 @@
         flex-direction: column;
         gap: 10px;
         position: fixed;
-        left: 40px; 
+        left: 40px;
 
         #first-line {
             display: none;
@@ -34,12 +45,19 @@
 
         .cv,
         .linkedin {
-            height: 30px; 
+            height: 30px;
         }
-    
+
         .footer-line {
             width: 1px;
             height: 60px;
+        }
+    }
+
+    .copyright {
+        p {
+            font-size: 24px;
+            line-height: 48px;
         }
     }
 }
@@ -49,7 +67,7 @@
         flex-direction: column;
         gap: 10px;
         position: fixed;
-        left: 40px; 
+        left: 40px;
 
         #first-line {
             display: none;
@@ -57,12 +75,19 @@
 
         .cv,
         .linkedin {
-            height: 30px; 
+            height: 30px;
         }
-    
+
         .footer-line {
             width: 1px;
             height: 60px;
+        }
+    }
+
+    .copyright {
+        p {
+            font-size: 20px;
+            line-height: 40px;
         }
     }
 }
@@ -74,19 +99,27 @@
         /*position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);*/
-        
+
         .footer-line {
             width: 70px;
             height: 1px;
         }
 
-        .cv, .linkedin {
-            height: 28px; 
-    
+        .cv,
+        .linkedin {
+            height: 28px;
+
             svg {
                 width: 28px;
                 height: 28px;
             }
+        }
+    }
+
+    .copyright {
+        p {
+            font-size: 16px;
+            line-height: 32px;
         }
     }
 }
