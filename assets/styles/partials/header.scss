@@ -23,7 +23,7 @@ header {
             line-height: 0;
         }
 
-        .menu-desktop {
+        .menu-links {
             ul {
                 padding: 0;
                 display: flex;
@@ -64,10 +64,6 @@ header {
         .settings {
             display: flex;
             gap: 24px;
-
-            .search {
-                display: none;
-            }
 
             .toggle {
                 width: 55px;
@@ -116,12 +112,13 @@ header {
     }
 }
 
+/*Light mode - header */
 .light-mode {
     #header {
         background: linear-gradient(180deg, #ffffff 0%, #d9d9d9 1001.14%);
         border-bottom: 1px solid $black;
 
-        .menu-desktop {
+        .menu-links {
             ul {
                 li {
                     a {
@@ -131,22 +128,6 @@ header {
                     svg {
                         fill: $black !important;
                     }
-                }
-            }
-        }
-
-        .settings {
-            .search {
-                svg {
-                    fill: $black;
-                }
-
-                circle {
-                    stroke: $black;
-                }
-
-                path {
-                    fill: $black;
                 }
             }
         }
@@ -170,7 +151,7 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    .menu-desktop {
+    .menu-links {
         display: none;
     }
 
@@ -234,7 +215,7 @@ header {
             }
         }
 
-        .menu-desktop {
+        .menu-links {
             position: fixed;
             z-index: 5;
             transition: width 0.3s, height 0.3s;
@@ -277,7 +258,7 @@ header {
             }
         }
 
-        .hamburger-button:checked ~ .menu-desktop {
+        .hamburger-button:checked ~ .menu-links {
             width: 215px;
             height: 140px;
             border-bottom-left-radius: 300px;
@@ -290,7 +271,7 @@ header {
                 background: $black;
             }
         }
-        .menu-desktop {
+        .menu-links {
             border: solid $black;
             border-width: 0 0 1px 1px;
             background: linear-gradient(180deg, #fff -115%, #d9d9d9 725%);

@@ -1,16 +1,14 @@
-include ../mixins/icons/icons
-include ../mixins/icons/logo
-include ../mixins/menu/menu
+include ../mixins/icons
+include ../mixins/logo
+include ../mixins/menu
 
 header
     #header
         a(href="index.html").logo-header
             +logo-header
-        .menu-desktop
-            +menu-desktop
+        .menu-links
+            +menu-links
         .settings
-            .search 
-                +search
             .toggle
                 input#darkmode(type="checkbox" checked="true")
                 label.toggle-item(for="darkmode")
@@ -21,5 +19,5 @@ header
                     span
                     span 
                     span 
-                .menu-desktop.menu-mobile
-                    +menu-desktop
+                .menu-links.menu-mobile
+                    +menu-links

@@ -53,16 +53,6 @@ html {
             text-decoration: none;
         }
 
-        .search {
-            circle {
-                stroke: $white;
-            }
-
-            path {
-                fill: $white;
-            }
-        }
-
         .card {
             position: relative;
             border-radius: 20px;

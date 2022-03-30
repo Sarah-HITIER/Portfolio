@@ -1,4 +1,4 @@
-include icons/icons
+include icons
 
 mixin comp-card(title, width=80)
     .card.tech-card
@@ -6,10 +6,7 @@ mixin comp-card(title, width=80)
             h1= title
         .card-element
             .img
-                img(src="../assets/images/"+title+".png" width=width)
-        .card-element
-            .search
-                +search
+                img(src="../assets/images/"+title.toLowerCase()+".png" width=width)
 
 mixin exp-card(type, date, title, desc)
     .card-content 

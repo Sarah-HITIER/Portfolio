@@ -1,8 +1,12 @@
+/**
+ * CSS REALISATIONS
+ */
+
 .real-content {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 80px 0 0;
+    margin: 40px 0 0;
 
     .real-card {
         .project-item {
@@ -129,10 +133,31 @@
 
 .light-mode {
     .real-card {
-        .infos {
-            .date {
-                .line {
-                    background: $black !important;
+        .project-item {
+            .infos {
+                .date {
+                    .line {
+                        background: $black !important;
+                    }
+                }
+            }
+
+            .visit {
+                &:hover {
+                    color: $white;
+                    -webkit-text-fill-color: $white;
+                }
+            }
+
+            .projects {
+                .buttons {
+                    .button-projects {
+                        &:hover {
+                            path {
+                                fill: $white;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -141,7 +166,7 @@
 
 @media screen and (min-width: 1225px) {
     .real-content {
-        margin: 40px 8vw;
+        padding: 40px 0;
         .real-card {
             width: 38vw;
             margin-right: 2vw;

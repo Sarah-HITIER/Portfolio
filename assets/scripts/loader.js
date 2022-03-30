@@ -2,10 +2,7 @@
  * Retirer le header et le footer pendant le loader puis afficher la page index quand le loader est fini
  */
 (function () {
-    if (
-        location.pathname === "/public/" ||
-        location.pathname === "/public/index.html"
-    ) {
+    if (window.location.href.indexOf("/public/index.html") != -1) {
         let header = document.getElementById("header");
         let loader = document.getElementById("logo-loader");
         let text = document.getElementsByClassName("hero-column");
@@ -34,9 +31,9 @@
     let comp_link = document.getElementsByClassName("comp_link");
     let exp_link = document.getElementsByClassName("exp_link");
     if (
-        location.pathname === "/public/benchkatalog.html" ||
-        location.pathname === "/public/etais-la-sauvin.html" ||
-        location.pathname === "/public/quizzy.html"
+        window.location.href.indexOf("/public/benchkatalog.html") != -1 ||
+        window.location.href.indexOf("/public/etais-la-sauvin.html") != -1 ||
+        window.location.href.indexOf("/public/quizzy.html") != -1
     ) {
         for (var i = 0; i < real_link.length; i++) {
             real_link[i].classList.add("active");

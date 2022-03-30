@@ -1,3 +1,7 @@
+/**
+ * CSS COMPETENCES
+ */
+
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +11,7 @@
         flex-grow: 0;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
 
         .card-element {
             display: flex;
@@ -48,10 +53,6 @@
                     filter: grayscale(1);
                     transition: 500ms;
                 }
-
-                .search {
-                    opacity: 0;
-                }
             }
 
             &:hover {
@@ -59,10 +60,6 @@
                     filter: grayscale(0);
                 }
                 h1 {
-                    transition: 500ms;
-                    opacity: 1;
-                }
-                .search {
                     transition: 500ms;
                     opacity: 1;
                 }
@@ -102,10 +99,6 @@
                     transition: 500ms;
                 }
 
-                .search {
-                    opacity: 0;
-                }
-
                 .img {
                     height: 100%;
 
@@ -121,10 +114,6 @@
                     filter: grayscale(0);
                 }
                 h1 {
-                    transition: 500ms;
-                    opacity: 1;
-                }
-                .search {
                     transition: 500ms;
                     opacity: 1;
                 }
