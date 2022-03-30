@@ -6,7 +6,7 @@ mixin comp-card(title, width=80)
             h1= title
         .card-element
             .img
-                img(src="../assets/images/"+title.toLowerCase().trim()+".png" width=width)
+                img(src="../assets/images/"+title.toLowerCase().replace(/\s/g, '')+".png" width=width)
 
 mixin exp-card(type, date, title, desc)
     .card-content 
